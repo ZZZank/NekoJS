@@ -164,14 +164,14 @@ unifiedPublishing {
             }
         }
 
-        if (ENV.CURSEFORGE_KEY) {
+        if (ENV.CURSEFORGE_KEY && project.hasProperty('curseforge_id')) {
             curseforge {
                 token = ENV.CURSEFORGE_KEY
                 id = project.curseforge_id
             }
         }
 
-        if (ENV.MODRINTH_TOKEN) {
+        if (ENV.MODRINTH_TOKEN && project.hasProperty('modrinth_id')) {
             modrinth {
                 token = ENV.MODRINTH_TOKEN
                 id = project.modrinth_id
